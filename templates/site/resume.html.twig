@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+{% block title %}TOPISCINE - Estimation - Résumé{% endblock %}
+
+
+{% block class1 %}{% endblock %}
+{% block class2 %}border_section{% endblock %}
+{% block class3 %}{% endblock %}
+
+{% block body %}
+    <div id="barre-devis" class="container-fluid mb-4 pt-2">
+        <div class="row">
+            <div class="col-md-12 text-center p-0 ">
+                <div class="d-flex flex-row  align-items-center justify-content-between container-fluid">
+                    <a href="/etapeVersTaille"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                    <h2>Faire une estimation</h2>
+                    <h5></h5>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 80%"
+                         aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="devis-option" class="container mb-3">
+        <div class="row mb-5">
+            <div class="col-md-12 text-center">
+                <h5>Résumé de vos choix</h5>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-md-12 text-center">
+                <p><strong><u>Forme choisie :</u> </strong>{{ forme }}</p>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-md-12 text-center">
+                <p> <strong><u>Fond choisi : </u></strong>{{ fond }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p><strong><u> Couleur choisie :</u></strong> {{ couleur }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                {% if forme == 'Rectangulaire' %}
+                    <p><strong><u>Taille: </u></strong>{{ largeur }} mètres de largeur par {{ longueur }} mètres de longueur</p>
+                {% endif %}
+                {% if forme == 'Ronde' %}
+                    <p><strong><u>Taille:</u></strong> {{ diametre }} mètres de diamètres</p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center mb-3">
+                <form action="/envoiDevis" method="post">
+                    <div class="input-group mb-3 w-50 text-center hidden ">
+                        <div class="input-group-prepend" >
+                            <span class="input-group-text" id="basic-addon1">Choix</span>
+                        </div>
+                        <input name="optionKit"     id="optionKitId"    type="text" class="form-control" placeholder="Choix" aria-label="Username" aria-describedby="basic-addon1">
+                        <input name="optionSac"     id="optionSacId" type="text" class="form-control" placeholder="Choix" aria-label="Username" aria-describedby="basic-addon1">
+                        <input name="optionAlarme"  id="optionAlarmeId"    type="text" class="form-control" placeholder="Choix" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <input id="submit" type="submit" value="Suivant"  class="btn btn-success">
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

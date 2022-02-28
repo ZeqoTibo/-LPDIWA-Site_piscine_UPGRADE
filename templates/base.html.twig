@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+    {% block stylesheet %}
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <!--import bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+              crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+        <!-- Icons Awesome CDN -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+              integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+              crossorigin="anonymous"/>
+        <link rel="icon" type="image/png" href="img/logo.png" />
+
+    {% endblock %}
+
+    {% block javascript %}
+        <script type="text/javascript" src="../js/Save.js"></script>
+    {% endblock %}
+</head>
+<body>
+<header>
+    <!-- Navbar / Menu -->
+    <nav class="navbar navbar-expand-md navbar-light container-fluid">
+        <img src="img/logo-vide.png" alt="logo du site">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHamburger"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarHamburger">
+            <ul class="navbar-nav">
+                <li class="nav-item {% block class1 %}{% endblock %}"><a class="nav-link " href="{{ path('accueil') }}">Accueil</a>
+                </li>
+                <li class="nav-item {% block class2 %}{% endblock %}"><a class="nav-link" href="{{ path('pageDevis') }}">Faire une estimation</a></li>
+                <li class="nav-item {% block class3 %}{% endblock %}"><a class="nav-link " href="{{ path('contact') }}">A
+                        propos de nous</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+{% block body %}{% endblock %}
+<footer class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-3 text-center">
+            <img src="img/logo-inverse.png" alt="logo du site - bas de page">
+        </div>
+        <div class="col-md-3">
+            <h3><a href="{{ path('accueil') }}">Accueil</a></h3>
+            <ul>
+                <li><a href="{{ path('accueil') }}#histoire">L'histoire de la piscine</a></li>
+                <li><a href="{{ path('accueil') }}#type">Les types de piscines</a></li>
+                <li><a href="{{ path('accueil') }}#carousel">Nos réalisations</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h3><a href="{{ path('pageDevis') }}">Faire une estimation</a></h3>
+            <ul>
+                <li><a href="{{ path('pageDevis') }}#ronde">Piscines creusées ronde</a></li>
+                <li><a href="{{ path('pageDevis') }}#rectangle">Piscines creusées rectangulaire</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h3><a href="{{ path('contact') }}">A propos de nous</a></h3>
+            <ul>
+                <li><a href="{{ path('contact') }}#entreprise">L'entreprise</a></li>
+                <li><a href="{{ path('contact') }}#quisommesnous">Qui sommes-nous</a></li>
+                <li><a href="{{ path('contact') }}#contactDiv">Nous contacter</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 text-center">
+            <h3>TOPISCINE</h3>
+        </div>
+        <div id="reseaux_sociaux" class="col-md-3">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook-square"></i>
+        </div>
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-3">
+            <p>Tout droits réservés Topiscine <i class="far fa-copyright"></i></p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

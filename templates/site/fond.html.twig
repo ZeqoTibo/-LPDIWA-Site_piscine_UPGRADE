@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+{% block title %}TOPISCINE - Devis - Fonds{% endblock %}
+
+{% block class1 %}{% endblock %}
+{% block class2 %}border_section{% endblock %}
+{% block class3 %}{% endblock %}
+
+
+{% block body %}
+    <div id="barre-devis" class="container-fluid mb-4 pt-2">
+        <div class="row">
+            <div class="col-md-12 text-center p-0 ">
+                <div class="d-flex flex-row  align-items-center justify-content-between container-fluid">
+                    <a href="/pageDevis"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                    <h2>Faire une estimation</h2>
+                    <h5></h5>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 20%"
+                         aria-valuenow="16.5" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="devis" class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h5>Choix du type de fond pour la piscine</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 d-flex justify-content-center align-items-center flex-column">
+                <button onclick="remplirInputPente(event);disabledButton()" id="enPente"
+                        class="img-devis btn border border-light rounded">
+                    En Pente
+                </button>
+                <i id="awesome-pente" class="fa fa-check-square" aria-hidden="true"></i>
+            </div>
+
+            <div class="col-md-6 d-flex justify-content-center align-items-center flex-column">
+                <button onclick="remplirInputPlat(event);disabledButton()" id="plate"
+                        class="img-devis btn border border-light rounded">
+                    Plâte
+                </button>
+                <i id="awesome-plat" class="fa fa-check-square" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center mb-3 ">
+                <form action="/etapeVersCouleur" method="post">
+                    <div class="input-group mb-3 w-50 text-center hidden">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Choix</span>
+                        </div>
+                        <input name="choix2" id="choix" type="text" class="form-control" placeholder="Choix"
+                               aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <input id="submit" type="submit" value="Suivant" class="btn btn-success" disabled="true">
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

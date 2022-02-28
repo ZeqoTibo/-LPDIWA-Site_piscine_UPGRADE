@@ -1,0 +1,39 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <!--import bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+          crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Icons Awesome CDN -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+          crossorigin="anonymous"/>
+    <script type="text/javascript" src="../js/Save.js"></script>
+</head>
+
+<header>
+</header>
+<h1>TOPISCINE</h1>
+<h3> En vous remerciant d'être passé par notre site !</h3>
+<h3>Voici les résultats de votre estimation</h3>
+
+<ul>
+    <li>Nom :  {{ contact.nom }}</li>
+    <li>Prénom :  {{ contact.prenom }}</li>
+    <li>Forme : {{ forme }}</li>
+    <li>Fond : {{ fond }}</li>
+    <li>Couleur : {{ couleur }} </li>
+    {% if forme == 'Rectangulaire' %}
+        <li>Taille: {{ largeur }} mètres de largeur par {{ longueur }} mètres de longueur</li>
+    {% endif %}
+    {% if forme == 'Ronde' %}
+        <li>Taille: {{ diametre }} mètres de diamètres</li>
+    {% endif %}
+</ul>
+<h3>Estimation : {{ prixTotal }} €</h3>
+<p>Si vous êtes toujours interessé, veuillez nous contacter au 06 59 86 45 78 ou par mail : topiscine.contact@gmail.com</p>

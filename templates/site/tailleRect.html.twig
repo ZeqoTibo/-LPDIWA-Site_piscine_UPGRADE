@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+{% block title %}TOPISCINE - Estimation - Taille{% endblock %}
+
+
+{% block class1 %}{% endblock %}
+{% block class2 %}border_section{% endblock %}
+{% block class3 %}{% endblock %}
+
+{% block body %}
+    <div id="barre-devis" class="container-fluid mb-4 pt-2">
+        <div class="row">
+            <div class="col-md-12 text-center p-0 ">
+                <div class="d-flex flex-row  align-items-center justify-content-between container-fluid">
+                    <a href="/etapeVersCouleur"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                    <h2>Faire une estimation</h2>
+                    <h5></h5>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 50%"
+                         aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="devis" class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h5>Choix de la taille pour la piscine</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center mb-3 mt-3">
+                <form action="/etapeVersResume" method="post">
+                    <div class="input-group text-center d-flex justify-content-center flex-column mb-3">
+                        <label class="form-label text-center" for="customRange1">Longueur (en mètre)</label>
+                        <div class="input-group-prepend text-center ">
+                            <input name="longueur" id="slider1" type="range" class="form-range" min="4" max="20"
+                                   value="12" oninput="document.getElementById('longueur').innerHTML = this.value"/>
+                            <label id="longueur">12</label>
+                        </div>
+                    </div>
+                    <div class="input-group text-center d-flex justify-content-center flex-column mb-3">
+                        <label class="form-label text-center" for="customRange1">Largeur (en mètre)</label>
+                        <div class="input-group-prepend text-center ">
+                            <input name="largeur" id="slider1" type="range" class="form-range " min="4" max="20"
+                                   value="12" oninput="document.getElementById('largeur').innerHTML = this.value"/>
+                            <label id="largeur">12</label>
+                        </div>
+                    </div>
+                    <input id="submit" type="submit" value="Suivant" class="btn btn-success">
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

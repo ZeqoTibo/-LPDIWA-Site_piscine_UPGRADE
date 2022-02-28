@@ -1,0 +1,158 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}TOPISCINE - Accueil{% endblock %}
+
+{% block class1 %}border_section{% endblock %}
+{% block class2 %}{% endblock %}
+{% block class3 %}{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="container-fluid place-to-footer">
+            <div id="fond" class="row">
+                <div class="col-md-12 text-center d-flex justify-content-center align-items-center flex-column">
+
+                    <h1>TOPISCINE</h1>
+                    <p>Nager dans le bonheur, c'est faire des brasses dans sa propre piscine</p>
+
+                </div>
+            </div>
+            <div id="histoire" class="row">
+                <div class="text-center">
+                    <h2>L'histoire de la piscine</h2>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4 text-center d-flex align-items-center">
+                            <p>Les premières piscines remontent à l'antiquité avec les bains grecs puis les bains
+                                romains. Ces bassins étaient à l'origine principalement utilisés pour la natation
+                                (natatio), mais la notion de pratique sportive a progressivement disparu et l'usage en a
+                                fait des lieux de bien-être et d'hygiène.</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="img/histoire.jpg" alt="image de piscine">
+                        </div>
+                        <div class="col-md-4 text-center  d-flex align-items-center">
+                            <p>Ce n’est qu’au XX° siècle que les <strong>piscines privées</strong> font leur apparition.
+                                Pourquoi ? Tout simplement parce qu’auparavant, l’eau n’était que très rarement
+                                distribuée dans les lieux privés. La salle de bain est une invention du XX° siècle
+                                rappelons-le. Les bains publics perdent alors de leur attrait et se transforment peu à
+                                peu en ces centres luxueux de balnéothérapie… qui remettent d’ailleurs au gout du jour
+                                les soins d’antan (aromathérapie, huiles, massages…). Mais le soin se démocratise encore
+                                avec l’émergence des piscines, saunas et hammams privés. Place à l’ère de
+                                l’individualité !</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="type" class="row">
+                <div class="text-center">
+                    <h2>Les différents types de piscines</h2>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-5 text-center">
+                            <img src="img/type.jpg" alt="image de piscine">
+                        </div>
+                        <div class="col-md-7 ">
+                            <p><strong>La piscine traditionnelle</strong><br>
+                                Ce sont des piscines durables (résistent bien au temps qui passe), avec une maçonnerie
+                                peu complexe à mettre en oeuvre et qui permet la construction de grands bassins</p>
+                            <p><strong>La piscine en béton armé monobloc</strong><br>
+                                Appelée aussi piscine en béton projeté, cette technique de construction permet des
+                                formes libres et / ou arrondies, ainsi que des finitions sophistiquées comme pour les
+                                piscines paysagées ou piscines lagons</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div id="sousImg" class="col-md-3 text-center d-flex align-items-center flex-column">
+                            <p class="mt-3 mb-0">En effet, il n’existe pas un type de piscine mais une multitude de possibilités pour
+                                votre piscine. Piscine enterrée traditionnelle, piscine sans autorisation, piscine pour
+                                un petit espace, piscine en partie hors du sol, piscine d’intérieur, piscine sur-mesure…<p>
+
+                                <p>En fonction du lieu d’implantation, de son environnement, des futurs utilisateurs, vous
+                                pouvez d’ores et déjà sélectionner l’un de ces types de piscine.</p>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div id="pKit" class="col-md-7 ">
+                            <p><strong>La piscine monocoque</strong><br>
+                                Appelée aussi piscine à coque ou en polyester, elle est fabriquée via des moules sur
+                                lesquels on projette des couches de fibre de verre et de résine synthétique. Comme la
+                                structure est parfaitement étanche et d’un seul tenant, elle est facile et rapide à
+                                installer, une fois que l’emplacement et les différentes canalisations sont bien
+                                préparés.</p>
+                            <p><strong>La piscine naturelle</strong><br>
+                                Appelée aussi piscine biologique ou écologique, c’est un type à part, de plus en plus
+                                populaire, étant donné son principe de fonctionnement écologique et naturelle. La
+                                structure peut être en béton, en bois ou en métal mais la filtration se fait à l’aide de
+                                plantes et de procédés naturels, sans ajout de produits chimiques pour la désinfection
+                                et le traitement de l’eau. Selon son architecture, elle peut prendre la forme d’un étang
+                                ou d’un mini-lac, très éloignée des piscines traditionnelles.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="carousel" class="row">
+                <div class="text-center">
+                    <h2>Nos réalisations</h2>
+                </div>
+                <div class="container">
+
+                    <div id="myCarousel" class="carousel slide text-center " data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <figure>
+                                    <img  src="img/p1.jpg" alt="réalisation 1">
+                                    <figcaption>Piscine en beton armé monobloc</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item ">
+                               <figure>
+                                   <img src="img/p2.jpg" alt="réalisation 2">
+                                   <figcaption>Piscine monocoque</figcaption>
+                               </figure>
+                            </div>
+                            <div class="carousel-item ">
+                               <figure>
+                                   <img src="img/p3.jpg" alt="réalisation 3">
+                                   <figcaption>Piscine traditionelle</figcaption>
+                               </figure>
+                            </div>
+                            <div class="carousel-item ">
+                               <figure>
+                                   <img src="img/p4.jpg" alt="réalisation 4">
+                                   <figcaption>Piscine traditionelle</figcaption>
+                               </figure>
+                            </div>
+                            <div class="carousel-item ">
+                                <figure>
+                                    <img src="img/p5.jpeg" alt="réalisation 5">
+                                    <figcaption>Piscine monocoque</figcaption>
+                                </figure>
+                            </div>
+                            <div class="carousel-item ">
+                                <figure>
+                                    <img src="img/p6.jpg" alt="réalisation 6">
+                                    <figcaption>Piscine traditionelle en T</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                            <span aria-hidden="true"><img src="img/left-arrow.png" alt="icon_arrow_left"/></span>
+                            <span class="sr-only">Précédent</span>
+                        </a>
+                        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                            <span aria-hidden="true"><img src="img/next.png" alt="icon_arrow_left"/></span>
+                            <span class="sr-only">Suivant</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+{% endblock %}
